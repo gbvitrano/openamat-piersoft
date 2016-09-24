@@ -1,5 +1,7 @@
 # openamat-piersoft
-Webbapp di @piersoft personalizzata con i gtfs di Palermo - **Tutorial** su http://www.piersoft.it/?p=1017
+Webbapp *GTFS in una mappa con pochi click* di @piersoft personalizzata con i gtfs di Palermo - **Tutorial** su http://www.piersoft.it/?p=1017
+
+**Nota bene:** Nel file **index.php** e **locator.php** va sostituito il mio indirizzo web "http://openamat.gbvitrano.org" con il vostro **"http://miosito.xxx/gtfs/"**
 
 Altro Tutorial molto utile per i file gtfs è **GTFS, ready, set, go** di @aborruso
  http://blog.spaziogis.it/2016/08/24/gtfs-pronti-partenza-via/
