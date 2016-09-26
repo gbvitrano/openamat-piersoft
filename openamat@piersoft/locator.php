@@ -14,7 +14,7 @@ $r=$_GET["r"];
   <link rel="stylesheet" href="http://necolas.github.io/normalize.css/2.1.3/normalize.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
-   <link rel="stylesheet" href="http://turbo87.github.io/leaflet-sidebar/src/L.Control.Sidebar.css" />
+   <link rel="stylesheet" href="L.Control.Sidebar.css" />
           <link rel="stylesheet" href="MarkerCluster.css" />
         <link rel="stylesheet" href="MarkerCluster.Default.css" />
         <meta property="og:image" content="http://openamat.gbvitrano.org/bus_.png"/>
