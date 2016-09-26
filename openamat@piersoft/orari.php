@@ -26,12 +26,15 @@ $route_short_namer=$_GET["route_short_namer"];
 $stop_ids=$_GET["stop_ids"];
 $stop_arrives=$_GET["stop_arrives"];
 $trip_ids=$_GET["trip_ids"];
+$calendar_monday=$_GET["calendar_monday"];
+$start_date=$_GET["start_date"];
+$end_date=$_GET["end_date"];
 //debug
-//echo $trip_idt.",".$service_idt.",".$route_idt.",".$service_idc.",".$route_idr.",".$route_long_namer.",".$route_short_namer.",".$stop_ids.",".$stop_arrives.",".$trip_ids."</br>";
+//echo $trip_idt.",".$service_idt.",".$route_idt.",".$service_idc.",".$route_idr.",".$route_long_namer.",".$route_short_namer.",".$stop_ids.",".$stop_arrives.",".$trip_ids.",startdate:".$start_date.",enddate:".$end_date.",".$calendar_monday."</br>";
 //$homepage1c=false;
 date_default_timezone_set("Europe/Rome");
-$ora=date("H:i:s", time()); 
-echo "<b>".$idname."</b></BR>Trasporti Pubblici Palermo, Bus e Tram gestiti da Amat spa</BR>Orari validi fino al 30/09/2016</BR>Biglietto ordinario 1,40 euro 90'</BR></BR>Sono le ore: <b>".$ora."</b>, arrivi pianificati nella prossima ora:</BR></BR>";
+$ora=date("H:i:s", time());
+echo "</BR>Trasporti Pubblici Palermo, Bus e Tram gestiti da Amat spa</BR>Orari validi fino al 30/09/2016</BR>Biglietto ordinario 1,40 euro 90'</BR></BR>Ricerca eseguita alle ore: <b>".$ora."</b></BR> Fermata: <b>".$idname."</b></BR>Arrivi pianificati nella prossima ora:</BR></BR>";
 echo get_stopid($idstop);
 
 function get_corse($corsa)
@@ -88,18 +91,23 @@ return   $homepage;
 function get_calendar($linea)
     {
       GLOBAL $service_idc;
+      GLOBAL $calendar_monday;
+      GLOBAL $start_date;
+      GLOBAL $end_date;
       $numero_giorno_settimana = date("w");
+      $today = date("Ymd");
+    //  echo $today;
       $linea=trim($linea);
-      $giornoposizione=0;
-      if ($numero_giorno_settimana ==0) $giornoposizione=7;
-      if ($numero_giorno_settimana ==1) $giornoposizione=1;
-      if ($numero_giorno_settimana ==2) $giornoposizione=2;
-      if ($numero_giorno_settimana ==3) $giornoposizione=3;
-      if ($numero_giorno_settimana ==4) $giornoposizione=4;
-      if ($numero_giorno_settimana ==5) $giornoposizione=5;
-      if ($numero_giorno_settimana ==6) $giornoposizione=6;
+      $giornoposizione=3; // inserire la posizione del Monday in calendar.txt
+      if ($numero_giorno_settimana ==0) $giornoposizione=$calendar_monday+6;
+      if ($numero_giorno_settimana ==1) $giornoposizione=$calendar_monday;
+      if ($numero_giorno_settimana ==2) $giornoposizione=$calendar_monday+1;
+      if ($numero_giorno_settimana ==3) $giornoposizione=$calendar_monday+2;
+      if ($numero_giorno_settimana ==4) $giornoposizione=$calendar_monday+3;
+      if ($numero_giorno_settimana ==5) $giornoposizione=$calendar_monday+4;
+      if ($numero_giorno_settimana ==6) $giornoposizione=$calendar_monday+5;
     //  echo "oggi è: ".$numero_giorno_settimana."</br>";
-    //    echo "giornoposizione: ".$giornoposizione."</br>";
+    //  echo "giornoposizione: ".$giornoposizione."</br>";
     $url1="gtfs/calendar.txt";
     $inizio1=1;
     $homepage1 =0;
@@ -107,19 +115,27 @@ function get_calendar($linea)
    //echo $url1;
     $csv1 = array_map('str_getcsv', file($url1));
     $count1 = 0;
+
     foreach($csv1 as $data1=>$csv11){
+
     //    if ($csv1[0][$count1]=="service_id") $service_id=$count1;
       $count1 = $count1+1;
     }
     //  echo "oggi: ".$numero_giorno_settimana."</br>";
     for ($ii=$inizio1;$ii<$count1;$ii++){
       $filter1= $csv1[$ii][$service_idc];
-
+//echo $filter1."</br>";
     //  echo $csv1[$ii][$numero_giorno_settimana]."</br>";
       if ($filter1==$linea){
 
       if ($csv1[$ii][$giornoposizione]==1) {
+      //   echo $today."</br>";
+      //   echo $csv1[$ii][$start_date]."</br>";
+      //   echo $csv1[$ii][$end_date]."</br>";
+        if ($today >=$csv1[$ii][$start_date] && $today <=$csv1[$ii][$end_date]){
       $homepage1=1;
+    //  echo "bingo";
+    }
   //    echo "filtro".$filter1."</br>";
   //      echo "giorno sett ".$csv1[$ii][7]."</br>";
   //    echo "homepage: ".$homepage1."</br>";
@@ -161,7 +177,7 @@ function get_linee($linea)
     //  return   $homepage1;
     }
 
-    if ($count > 40){
+    if ($count > 80){
       $homepage1="errore generico linea";
     //  return   $homepage1;
     }
@@ -215,7 +231,7 @@ GLOBAL $trip_ids;
           if ($csv[$i][$stop_arrives] <=$ora2 && $csv[$i][$stop_arrives] >$ora) {
 
             $filter1= $csv[$i][$stop_ids];
-
+            //echo $filter1;
         if ($filter1==$linea){
         //   array_push($distanza[$i]['orario'],$csv[$i][1]);
           $distanza[$i]['orario']=$csv[$i][$stop_arrives];
@@ -223,7 +239,7 @@ GLOBAL $trip_ids;
             $distanza[$i]['linea']=get_corse($csv[$i][$trip_ids]);
             $c++;
 
-        //  echo "linea".$distanza[$i]['linea'];
+        // echo "linea".$distanza[$i]['linea'];
           }
         }
           }

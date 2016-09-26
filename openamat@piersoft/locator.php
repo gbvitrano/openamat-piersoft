@@ -10,18 +10,18 @@ $r=$_GET["r"];
 <html lang="it">
   <head>
   <title>Trasporti pubblici Palermo</title>
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="http://necolas.github.io/normalize.css/2.1.3/normalize.css" />
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="http://necolas.github.io/normalize.css/2.1.3/normalize.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
-<link rel="stylesheet" href="http://turbo87.github.io/leaflet-sidebar/src/L.Control.Sidebar.css" />
-<link rel="stylesheet" href="MarkerCluster.css" />
-<link rel="stylesheet" href="MarkerCluster.Default.css" />
-<meta property="og:image" content="http://openamat.gbvitrano.org/bus_.png"/>
-<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+   <link rel="stylesheet" href="http://turbo87.github.io/leaflet-sidebar/src/L.Control.Sidebar.css" />
+          <link rel="stylesheet" href="MarkerCluster.css" />
+        <link rel="stylesheet" href="MarkerCluster.Default.css" />
+        <meta property="og:image" content="http://openamat.gbvitrano.org/bus_.png"/>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
 <script src="http://turbo87.github.io/leaflet-sidebar/src/L.Control.Sidebar.js"></script>
-<script src="leaflet.markercluster.js"></script>
-<script src="http://joker-x.github.io/Leaflet.geoCSV/lib/jquery.js"></script>
+   <script src="leaflet.markercluster.js"></script>
+   <script src="http://joker-x.github.io/Leaflet.geoCSV/lib/jquery.js"></script>
 
 <script type="text/javascript">
 
@@ -36,12 +36,13 @@ function microAjax2(B,A){this.bindFunction=function(E,D){return function(){retur
         right:0;
         left:0;
         bottom:0;
-        font-family: 'Open Sans';
+         font-family: 'Open Sans';
 }
 #logo{
 position:fixed;
 top:80px;
 right:10px;
+z-index: 0;
 // border-radius: 5px;
 //      -moz-border-radius: 5px;
 //    -webkit-border-radius: 5px;
@@ -51,6 +52,7 @@ right:10px;
 //    box-shadow: 0 3px 14px rgba(0,0,0,0.4)
 
 }
+
 #infodiv{
 	background-color: rgba(255, 255, 255, 0.65);
 	font-family: 'Open Sans';
@@ -80,10 +82,9 @@ right:10px;
     display:none;
 }
 #loader .message {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	border-radius: 4px;
+    position:absolute;
+    left:50%;
+    top:50%;
 }
 p.pic {
     width: 48px;
@@ -92,10 +93,10 @@ p.pic {
 }
 
         .lorem {
-            font-family: 'Open Sans';
+             font-family: 'Open Sans';
             color: #AAA;
         }
-  </style>
+</style>
   </head>
 
 <body>
@@ -103,15 +104,16 @@ p.pic {
   <div data-tap-disabled="true">
 
  <div id="mapdiv"></div>
- <div id="sidebar">
 
-</div>
 <div id="infodiv" style="leaflet-popup-content-wrapper">
   <p><b>Trasporti pubblici Palermo<br></b>
-  Mappa con fermate, linee e orari dei Bus e Tram di Palermo - <a href="https://www.comune.palermo.it/opendata_dld.php?id=388" title="Gtfs Amat Palermo" target="_blank" >Amat spa</a>. <a href="http://www.piersoft.it/?p=1017" title="Tutorial: GTFS in una mappa con pochi clic" target="_blank"> <br>Map e turorial</a> by <a href="https://twitter.com/Piersoft" title="@piersoft" target="_blank">@piersoft</a>. GTFS Lic. CC-BY <a href="https://www.comune.palermo.it/opendata_dld.php?id=389" title="Gtfs Amat Palermo" target="_blank">OpenData Comune di Palermo</a> <br>Rielaborazione grafica:<a href="https://twitter.com/gbvitrano" target="_blank"> Giovan Battista Vitrano</a> - Emilio Di Gristina</p>
+  Mappa con fermate, linee e orari dei Bus e Tram di Palermo - <a href="https://www.comune.palermo.it/opendata_dld.php?id=388" title="Gtfs Amat Palermo" target="_blank" >Amat spa</a>. <a href="http://www.piersoft.it/?p=1017" title="Tutorial: GTFS in una mappa con pochi clic" target="_blank"> <br>Map e turorial</a> by <a href="https://twitter.com/Piersoft" title="@piersoft" target="_blank">@piersoft</a>. GTFS Lic. CC-BY <a href="https://www.comune.palermo.it/opendata_dld.php?id=389" title="Gtfs Amat Palermo" target="_blank">OpenData Comune di Palermo</a> <br>Rielaborazione grafica:<a href="https://twitter.com/gbvitrano" target="_blank"> Giovan Battista Vitrano</a> - Emilio Di Gristina</p>  
 </div>
 <div id="logo" style="leaflet-popup-content-wrapper">
-<a href="https://openamat.gbvitrano.org/"><img src="logo.png" width="40px" title="localizzami" alt="localizzami"></a>
+<a href="http://openamat.gbvitrano.org/" target="_blank"><img src="logo.png" width="40px" title="Localizzami" alt="Localizzami"></a>
+</div>
+<div id="sidebar" style="z-index: 1;">
+
 </div>
 <div id='loader'><span class='message'><p class="pic"><img src="http://openamat.gbvitrano.org/ajax-loader3.gif"></p></span></div>
 </div>
@@ -124,19 +126,19 @@ p.pic {
 </script>
   <script type="text/javascript">
   var dataLayer = new L.geoJson();
-		var lat='<?php printf($_GET['lat']); ?>',
+    var lat='<?php printf($_GET['lat']); ?>',
         lon='<?php printf($_GET['lon']); ?>',
         zoom=18;
 
 
         var transport = new L.TileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {minZoom: 0, maxZoom: 20, attribution: 'Map Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors.'});
         var realvista = L.tileLayer.wms("http://213.215.135.196/reflector/open/service?", {
-            		layers: 'rv1',
-            		format: 'image/jpeg',attribution: '<a href="http://www.realvista.it/website/Joomla/" target="_blank">RealVista &copy; CC-BY Tiles</a> | <a href="http://openstreetmap.org">OpenStreetMap</a> contributors.'
-            	});
+                layers: 'rv1',
+                format: 'image/jpeg',attribution: '<a href="http://www.realvista.it/website/Joomla/" target="_blank">RealVista &copy; CC-BY Tiles</a> | <a href="http://openstreetmap.org">OpenStreetMap</a> contributors.'
+              });
 
         var osm = new L.TileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: 'Map Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors. map by @piersoft'});
-		//    var mapquest = new L.TileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {subdomains: '1234', maxZoom: 18, attribution: 'Map Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'});
+    //    var mapquest = new L.TileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {subdomains: '1234', maxZoom: 18, attribution: 'Map Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'});
 
         var map = new L.Map('mapdiv', {
             editInOSMControl: true,
@@ -216,15 +218,18 @@ p.pic {
                   var trip_idt=e.popup._source.feature.properties.trip_idt;
                   var service_idt=e.popup._source.feature.properties.service_idt;
                   var route_idt=e.popup._source.feature.properties.route_idt;
+                  var calendar_monday=e.popup._source.feature.properties.calendar_monday;
+                  var start_date=e.popup._source.feature.properties.start_date;
+                  var end_date=e.popup._source.feature.properties.end_date;
 
-                  console.log(marker+" "+name);
+                  console.log(marker+" "+name+" calendar monday"+calendar_monday);
                   sidebar.show();
                 var contenedor = document.getElementById('sidebar');
                 if(marker == '')
                 {contenedor.innerHTML = '';
                 } else{
 
-                  contenedor.innerHTML = '<iframe width="100%" height="600" src="tmp.php?id='+marker+'&name='+name+'&stop_ids='+stop_ids+'&stop_arrives='+stop_arrives+'&trip_ids='+trip_ids+'&route_short_namer='+route_short_namer+'&route_long_namer='+route_long_namer+'&route_idr='+route_idr+'&service_idc='+service_idc+'&trip_idt='+trip_idt+'&service_idt='+service_idt+'&route_idt='+route_idt+'" frameborder="0" allowfullscreen></iframe>';
+                  contenedor.innerHTML = '<iframe width="100%" height="600" src="tmp.php?id='+marker+'&sname='+name+'&stop_ids='+stop_ids+'&stop_arrives='+stop_arrives+'&trip_ids='+trip_ids+'&route_short_namer='+route_short_namer+'&route_long_namer='+route_long_namer+'&route_idr='+route_idr+'&service_idc='+service_idc+'&trip_idt='+trip_idt+'&service_idt='+service_idt+'&route_idt='+route_idt+'&calendar_monday='+calendar_monday+'&start_date='+start_date+'&end_date='+end_date+'" frameborder="0" allowfullscreen></iframe>';
 
                 var element = document.getElementById("infodiv");
                 if (element !=null) element.parentNode.removeChild(element);
@@ -245,11 +250,11 @@ p.pic {
           finishedLoading();
         } );
 
-function startLoading() {
+  function startLoading() {
     loader.className = '';
-}
+  }
 
-function finishedLoading() {
+  function finishedLoading() {
     // first, toggle the class 'done', which makes the loading screen
     // fade out
     loader.className = 'done';
@@ -259,7 +264,7 @@ function finishedLoading() {
         // map again.
         loader.className = 'hide';
     }, 500);
-}
+  }
       sidebar.on('show', function () {
           console.log('Sidebar will be visible.');
       });
@@ -316,7 +321,7 @@ function finishedLoading() {
 
       $.getJSON("json/routes.geojson", function(data) { addDataToMapUCL(data, map); });
 
-</script>
+  </script>
 
-</body>
-</html>
+  </body>
+  </html>
