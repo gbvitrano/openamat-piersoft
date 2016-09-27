@@ -11,6 +11,8 @@ $r=$_GET["r"];
   <head>
   <title>Trasporti pubblici Palermo</title>
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="http://openamat.gbvitrano.org/favicon.ico"/> 
+<link rel="icon" href="http://openamat.gbvitrano.org/favicon.png" type="image/png"/> 
   <link rel="stylesheet" href="http://necolas.github.io/normalize.css/2.1.3/normalize.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
@@ -128,7 +130,7 @@ p.pic {
   var dataLayer = new L.geoJson();
     var lat='<?php printf($_GET['lat']); ?>',
         lon='<?php printf($_GET['lon']); ?>',
-        zoom=18;
+        zoom=15;
 
 
         var transport = new L.TileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {minZoom: 0, maxZoom: 20, attribution: 'Map Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors.'});
@@ -137,7 +139,8 @@ p.pic {
                 format: 'image/jpeg',attribution: '<a href="http://www.realvista.it/website/Joomla/" target="_blank">RealVista &copy; CC-BY Tiles</a> | <a href="http://openstreetmap.org">OpenStreetMap</a> contributors.'
               });
 
-        var osm = new L.TileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: 'Map Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors. map by @piersoft'});
+        var osm = new L.TileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {maxZoom: 20, attribution: 'Map Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA - <a href="mailto:gbvitrano@gmail.com"><img src="http://www.gbvitrano.eu/clip/bc/gb_01.png"http://www.gbvitrano.eu/clip/bc/gb_01.pnggb_01[1].png" width="24" height="24" Title=" Rielaborazione Opendata - Giovan Battista Vitrano" alt="Giovan Battista Vitrano"/></a> - <a href="https://www.comune.palermo.it/opendata_dld.php?id=389" title="GTFS Trasporti Pubblici - Comune di Palermo" target="_blank">Dataset GTFS</a> - </a><a href="http://www.piersoft.it/tutorial-gtfs-mappa-click/" title="Tutorial: GTFS in una mappa con pochi click" target="_blank">Mappa basata sul Tutorial di @piersoft - </a>'
+});
     //    var mapquest = new L.TileLayer('http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {subdomains: '1234', maxZoom: 18, attribution: 'Map Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'});
 
         var map = new L.Map('mapdiv', {

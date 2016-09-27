@@ -8,15 +8,14 @@ $r=$_GET['r'];
 <html>
 <head>
 <meta charset=utf-8 />
-<title>Trasporti pubblici Palermo</title>
-<link rel="shortcut icon" href="http://www.gbvitrano.eu/qgis_server/css/favicon.ico"/> 
-<link rel="icon" href="http://www.gbvitrano.eu/qgis_server/css/favicon.png" type="image/png"/> 
-   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+  <title>Trasporti pubblici Palermo</title>
+<link rel="shortcut icon" href="http://openamat.gbvitrano.org/favicon.ico"/> 
+<link rel="icon" href="http://openamat.gbvitrano.org/favicon.png" type="image/png"/> 
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />
 <meta name="viewport" content="width=device-width, initial-scale=0.8, maximum-scale=1.0, user-scalable=no">
-<meta property="og:image" content="http://openamat.gbvitrano.org/bus_.png"/>
+<meta property="og:image" content="http://openamat.gbvitrano.org/gtfstutorial/bus_.png"/>
 
 </head>
 <body onload="getLocation()">
