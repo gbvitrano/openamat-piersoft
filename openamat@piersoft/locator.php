@@ -297,7 +297,7 @@ p.pic {
                 var direzione="ANDATA";
                 if (feature.properties.direction_id ==1) direzione="RITORNO";
                   popupString += '<b>Numero: </b>' + feature.properties.name + '<br />';
-                  popupString += '<b>Linea: </b>' + feature.properties.routes_route_long_name + '<br />';
+                  popupString += '<b>Linea: </b>' + feature.properties.route_long_name + '<br />';
                   popupString += '<b>Direzione: </b> ' + direzione + '<br />';
 
                                   //  for (var k in feature.properties) {
@@ -309,12 +309,12 @@ p.pic {
               layer.setStyle({
                weight: 5,
                opacity: 0.7,
-               color: '#'+feature.properties.routes_route_color,
+               color: '#'+feature.properties.route_color,
                dashArray: '3',
                fillOpacity: 0.3,
                fillColor: '#000000'
               })
-              //console.log(feature.properties.routes_route_color);
+              //console.log(feature.properties.route_color);
               }
 
               });
