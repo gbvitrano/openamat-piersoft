@@ -294,11 +294,17 @@ p.pic {
 
               onEachFeature: function(feature, layer) {
                 var popupString = '<div class="popup">';
-                var direzione="ANDATA";
+                var mezzo="Bus";
+                if (feature.properties.route_type ==0) mezzo="Tram";
+				var direzione="ANDATA";
                 if (feature.properties.direction_id ==1) direzione="RITORNO";
+		   		popupString += '<b>Tipologia Mezzo: </b> ' + mezzo + '<br />';
                   popupString += '<b>Numero: </b>' + feature.properties.name + '<br />';
                   popupString += '<b>Linea: </b>' + feature.properties.route_long_name + '<br />';
                   popupString += '<b>Direzione: </b> ' + direzione + '<br />';
+                  popupString += '<b>Capolinea: </b>' + feature.properties.trip_headsign + '<br />';
+				  popupString += '<b>Agenzia: </b>' + feature.properties.agency_name + '<br />';
+				   
 
                                   //  for (var k in feature.properties) {
                                   //      var v = feature.properties[k];
