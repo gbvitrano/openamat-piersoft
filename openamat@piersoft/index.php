@@ -11,6 +11,7 @@ $r=$_GET['r'];
   <title>Trasporti pubblici Palermo</title>
 <link rel="shortcut icon" href="http://openamat.gbvitrano.org/favicon.ico"/> 
 <link rel="icon" href="http://openamat.gbvitrano.org/favicon.png" type="image/png"/> 
+<meta name="description" content="Mappa con fermate, linee e orari dei Bus e Tram di Palermo. Gli orari sono estratti dal dataset gtfs dell'Amat spa, applicando il tutorial di http://www.piersoft.it/tutorial-gtfs-mappa-click/ @piersoft Lic IoDL o CC_BY delle aziende TPL e il Db SpatiaLite e Query utili di @aborruso">
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <script src='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/v2.2.2/mapbox.css' rel='stylesheet' />

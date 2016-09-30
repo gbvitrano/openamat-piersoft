@@ -13,6 +13,7 @@ $r=$_GET["r"];
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="http://openamat.gbvitrano.org/favicon.ico"/> 
 <link rel="icon" href="http://openamat.gbvitrano.org/favicon.png" type="image/png"/> 
+<meta name="description" content="Mappa con fermate, linee e orari dei Bus e Tram di Palermo. Gli orari sono estratti dal dataset gtfs dell'Amat spa, applicando il tutorial di http://www.piersoft.it/tutorial-gtfs-mappa-click/ @piersoft Lic IoDL o CC_BY delle aziende TPL e il Db SpatiaLite e Query utili di @aborruso">
   <link rel="stylesheet" href="http://necolas.github.io/normalize.css/2.1.3/normalize.css" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
