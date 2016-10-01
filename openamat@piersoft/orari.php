@@ -6,7 +6,7 @@
 <style type="text/css">
 body,td,th {
 font-family: "Open Sans";
-font-size: 14px;
+font-size: 12px;
 }
 </style>
 </head>

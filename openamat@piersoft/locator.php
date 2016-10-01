@@ -55,6 +55,19 @@ z-index: 0;
 //    box-shadow: 0 3px 14px rgba(0,0,0,0.4)
 
 }
+#openamat-logo {
+position:fixed;
+top:150px;
+right:10px;
+z-index: 0;
+// border-radius: 5px;
+//      -moz-border-radius: 5px;
+//    -webkit-border-radius: 5px;
+//    border: 2px solid #808080;
+//    background-color:#fff;
+//    padding:2px;
+//    box-shadow: 0 3px 14px rgba(0,0,0,0.4)
+	}
 
 #infodiv{
 	background-color: rgba(255, 255, 255, 0.65);
@@ -114,6 +127,9 @@ p.pic {
 </div>
 <div id="logo" style="leaflet-popup-content-wrapper">
 <a href="http://openamat.gbvitrano.org/" target="_blank"><img src="logo.png" width="40px" title="Localizzami" alt="Localizzami"></a>
+</div>
+<div id="openamat-logo" style="leaflet-popup-content-wrapper">
+<a href="https://www.facebook.com/groups/openamat/" target="_blank"><img src="logo_openamat.png" width="40px" title="Comunity Facebook #Openamat" alt="Comunity #Openamat"></a>
 </div>
 <div id="sidebar" style="z-index: 1;">
 
