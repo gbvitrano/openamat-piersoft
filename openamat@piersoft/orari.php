@@ -32,7 +32,6 @@ $end_date=$_GET["end_date"];
 //debug
 //echo $trip_idt.",".$service_idt.",".$route_idt.",".$service_idc.",".$route_idr.",".$route_long_namer.",".$route_short_namer.",".$stop_ids.",".$stop_arrives.",".$trip_ids.",startdate:".$start_date.",enddate:".$end_date.",".$calendar_monday."</br>";
 //$homepage1c=false;
-// definisco due array arbitrarie
 $giorni = array("Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato");
 $mesi = array("Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre","Novembre", "Dicembre");
 // giorno della settimana in italiano
@@ -51,7 +50,7 @@ $ora=date("H:i:s", time());
 $data=date("d/m/Y", time());
 // echo("<img src=\"logo_openamat.svg\">");
 echo "<a href=\"https://www.facebook.com/groups/openamat/\"target=\"_blank\"><img src=\"logo_openamat.svg\"title=\"Comunity #Openamat\"></a>";
-echo "</BR> Trasporti Pubblici Palermo, Bus e Tram gestiti da Amat spa</BR>Orari validi fino al 31/10/2016</BR>Biglietto ordinario 1,40 euro 90'</BR></BR>Ricerca eseguita: <b>".$nome_giorno." ".$numero_giorno_mese." ".$nome_mese." ".$anno." </b></BR> alle ore <b>".$ora."</b></BR> Fermata: <b>".$idname."</b></BR>Arrivi pianificati nella prossima ora:</BR></BR>";
+echo "</BR> Trasporti Pubblici Palermo, Bus e Tram gestiti da Amat spa</BR>Orari validi fino al 31/12/2016</BR>Biglietto ordinario 1,40 euro 90'</BR></BR>Ricerca eseguita: <b>".$nome_giorno." ".$numero_giorno_mese." ".$nome_mese." ".$anno." </b></BR> alle ore <b>".$ora."</b></BR> Fermata: <b>".$idname."</b></BR>Arrivi pianificati nella prossima ora:</BR></BR>";
 echo get_stopid($idstop);
 
 function get_corse($corsa)
@@ -282,6 +281,5 @@ GLOBAL $trip_ids;
   ?>
 
 <body>
-
 </body>
 </html>

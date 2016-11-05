@@ -17878,7 +17878,7 @@
                 "stop_desc": "",
                 "stop_code": "1824",
                 "stop_id": "1824",
-                "stop_name": "S. M. DI GESU' - FALSOMIELE",
+                "stop_name": "S. M. DI GESU'- FALSOMIELE",
                 "stop_ids": 3,
                 "stop_arrives": 1,
                 "trip_ids": 0,
@@ -31152,15 +31152,15 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    13.31674933,
-                    38.18888182
+                    13.40390891,
+                    38.09451645
                 ]
             },
             "properties": {
                 "stop_desc": "",
-                "stop_code": "1266",
-                "stop_id": "1266",
-                "stop_name": "OLIMPO - PALASPORT",
+                "stop_code": "662",
+                "stop_id": "662",
+                "stop_name": "DEI MILLE - XXVII MAGGIO",
                 "stop_ids": 3,
                 "stop_arrives": 1,
                 "trip_ids": 0,
@@ -32147,6 +32147,64 @@
                 "stop_code": "2290",
                 "stop_id": "2290",
                 "stop_name": "SPIRITO SANTO",
+                "stop_ids": 3,
+                "stop_arrives": 1,
+                "trip_ids": 0,
+                "route_short_namer": 8,
+                "route_long_namer": 0,
+                "route_idr": 5,
+                "service_idc": 0,
+                "trip_idt": 7,
+                "service_idt": 6,
+                "route_idt": 1,
+                "calendar_monday": 3,
+                "start_date": 1,
+                "end_date": 2
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.37357005,
+                    38.08969272
+                ]
+            },
+            "properties": {
+                "stop_desc": "",
+                "stop_code": "2297",
+                "stop_id": "2297",
+                "stop_name": "REGIONE SICILIANA - S. M. DI GESU' 1",
+                "stop_ids": 3,
+                "stop_arrives": 1,
+                "trip_ids": 0,
+                "route_short_namer": 8,
+                "route_long_namer": 0,
+                "route_idr": 5,
+                "service_idc": 0,
+                "trip_idt": 7,
+                "service_idt": 6,
+                "route_idt": 1,
+                "calendar_monday": 3,
+                "start_date": 1,
+                "end_date": 2
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    13.3694405,
+                    38.08880756
+                ]
+            },
+            "properties": {
+                "stop_desc": "",
+                "stop_code": "2296",
+                "stop_id": "2296",
+                "stop_name": "REGIONE SICILIANA - CHIAVELLI",
                 "stop_ids": 3,
                 "stop_arrives": 1,
                 "trip_ids": 0,
@@ -34139,8 +34197,8 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    13.362628805,
-                    38.086697195
+                    13.362628212,
+                    38.086697022
                 ]
             },
             "properties": {
@@ -37097,15 +37155,15 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    13.40390891,
-                    38.09451645
+                    13.31674933,
+                    38.18888182
                 ]
             },
             "properties": {
                 "stop_desc": "",
-                "stop_code": "662",
-                "stop_id": "662",
-                "stop_name": "DEI MILLE - XXVII MAGGIO",
+                "stop_code": "1266",
+                "stop_id": "1266",
+                "stop_name": "OLIMPO - PALASPORT",
                 "stop_ids": 3,
                 "stop_arrives": 1,
                 "trip_ids": 0,
