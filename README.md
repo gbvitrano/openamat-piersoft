@@ -1,4 +1,7 @@
 # openamat@piersoft
+
+<a href="http://openamat.gbvitrano.it/"><img width="1000" src="http://coseerobe.gbvitrano.it/wp/wp-content/uploads/2016/11/mappe_piersoft.jpg" Title="Trasporti pubblici Città di Palermo con il tutorial di @piersoft" alt="Trasporti pubblici Città di Palermo con il tutorial di @piersoft" /></a>
+
 Webbapp [*GTFS in una mappa con pochi click*](http://www.piersoft.it/?p=1017) di [@piersoft](https://github.com/piersoft) personalizzata con i [gtfs](https://github.com/openamat/Official-Data) di Palermo - [**Tutorial su piersoft.it**](http://www.piersoft.it/?p=1017) - [**qui repo su github**](https://github.com/piersoft/gtfstutorial)
 
 **Nota bene:** Nel file **index.php** e **locator.php** va sostituito il mio indirizzo web "http://openamat.gbvitrano.org" con il vostro **"http://miosito.xxx/gtfs/"**
